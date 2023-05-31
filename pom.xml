@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://18.143.195.198:8081/repository/walmaet-release/</url>
+	      <url>http:http://13.212.230.67:8081/repository/Ramesh-Release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository</name>
-	      <url>http://18.143.195.198:8081/repository/walmart-snapshot/</url>
+	      <url>http:http://13.212.230.67:8081/repository/Ramesh-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
