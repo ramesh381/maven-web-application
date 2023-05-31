@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Technologies. Bengaluru,Karnataka,India </h1>
+<h1 align="center">Hello Welcome to Mithun Technologies. Bengaluru,Karnataka,India </h1>
 <h1 align="center"> Mithun Technologies- Very Good Training center for DevOps with AWS in Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios Hello Ramesh happy weekend wekkendlo huys good mornig happy weekd we will meet on monday</h1>
 <hr>
 <br>
