@@ -1,0 +1,31 @@
+node{
+def mavenHome= tool name: 'Ramesh'
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '7', daysToKeepStr: '', numToKeepStr: '7')), pipelineTriggers([pollSCM('* * * * *')])])
+ echo "jenkins home name : $JENKINS_HOME"
+ echo "jenkins job name :   $JENKINS_HOME"
+timestamps {
+    // some block
+}
+stage('CheckoutCode'){
+
+git branch: 'development', credentialsId: '7255273c-8f90-44f6-b079-1bc22e9ec654', url: 'https://github.com/ramesh381/maven-web-application.git'
+
+}
+stage('Build'){
+
+sh "${mavenHome}/bin/mvn clean package"
+}
+stage('Sonar'){
+sh "${mavenHome}/bin/mvn sonar:sonar"
+}
+
+stage('ArtifactsDeploy'){
+sh "${mavenHome}/bin/mvn clean deploy"
+}
+stage('TomcatDeploy'){
+sshagent(['de4f42ac-16aa-4ace-a098-e95dceee6da6']) {
+sh "scp -o StrictHostKeyChecking=no  target/maven-web-application.war ec2-user@18.139.208.209:/opt/apache-tomcat-9.0.75/webapps/"
+
+}
+}
+}
